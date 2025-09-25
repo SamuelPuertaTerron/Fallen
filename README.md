@@ -1,22 +1,27 @@
-# Fallen
-A fantasy 2D game written in C++20 using Raylib. 
+# Fallen  
+*A fantasy 2D game written in C++20 using [Raylib](https://www.raylib.com/).*  
 
-## Build
-The build system uses Premake 5 and currently only supports Visual Studio 2022.  
+---
 
-Click on the Build.bat
+## Build  
 
-This should build the Visual Studio Solution. 
+The project uses **Premake 5** as the build system and currently supports **Visual Studio 2022** only.  
 
-Open it up and build the currently selected application. This will build all the dependencies. 
+1. Run **`Build.bat`**  
+2. This will generate a Visual Studio solution.  
+3. Open the solution and build the currently selected application – all dependencies will be built automatically.  
 
-## Third Party Libraries
+---
 
-Here is a list of the third parties used.
+## Third-Party Libraries  
 
-Raylib for Window creation and rendering. 
-Entt for ECS intergration. 
-Sol2 for Lua scripting. 
-ImGui & rlImGui for tools GUI. 
-Nlohmannjson for Json serialization. 
-Premake5 as the build system. 
+Fallen relies on the following libraries:  
+
+- [Raylib](https://www.raylib.com/) – window creation & rendering  
+- [EnTT](https://github.com/skypjack/entt) – entity-component system  
+- [Sol2](https://github.com/ThePhD/sol2) – Lua scripting  
+- [ImGui](https://github.com/ocornut/imgui) & [rlImGui](https://github.com/raylib-extras/rlImGui) – in-game tools GUI  
+- [nlohmann/json](https://github.com/nlohmann/json) – JSON serialization  
+- [Premake5](https://premake.github.io/) – build configuration  
+
+---
