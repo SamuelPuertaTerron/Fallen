@@ -1,6 +1,4 @@
 # Fallen  
-![C++20](https://img.shields.io/badge/language-C%2B%2B20-blue.svg)  
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 *A fantasy 2D game written in C++20 using [Raylib](https://www.raylib.com/).*  
 
 ## Build  
