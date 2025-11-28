@@ -18,7 +18,7 @@ namespace Fallen
 
 		Input::ShouldLockMouseCursor(false);
 
-		Engine::GetInstance().Pause();
+		Time::Pause();
 	}
 
 	void PauseState::OnTick(float deltaTime)

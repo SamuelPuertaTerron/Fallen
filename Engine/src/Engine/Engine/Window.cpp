@@ -1,9 +1,9 @@
 ﻿#include "Globals.h"
 #include "Window.h"
 
-#include "EventManager.h"
 #include "raylib/raylib.h"
 
+#include "EventManager.h"
 
 namespace FEngine
 {
@@ -27,30 +27,29 @@ namespace FEngine
 
 		if (HasFlag(description.WindowFlags, EWindowFlags::Fullscreen))
 		{
-			int monitor = GetCurrentMonitor();
-			width = GetMonitorWidth(monitor);
-			height = GetMonitorHeight(monitor);
+			int monitor = ::GetCurrentMonitor();
+			width = ::GetMonitorWidth(monitor);
+			height = ::GetMonitorHeight(monitor);
 		}
 
-		SetConfigFlags(ToRaylibFlags(description.WindowFlags));
+		::SetConfigFlags(ToRaylibFlags(description.WindowFlags));
 
-		InitWindow(width, height, description.Title.c_str());
-		
+		::InitWindow(width, height, description.Title.c_str());
 
-		int useEscapeKey = description.UseExitKey ? static_cast<int>(description.ExitKeyCode) : static_cast<int>(KEY_NULL);
-		SetExitKey(useEscapeKey);
+		int useEscapeKey = description.UseExitKey ? static_cast<int>(description.ExitKeyCode) : static_cast<int>(::KEY_NULL);
+		::SetExitKey(useEscapeKey);
 
 		m_bIsWindowRunning = true;
 	}
 
 	Window::~Window()
 	{
-		CloseWindow();
+		::CloseWindow();
 	}
 
 	bool Window::IsWindowRunning() const
 	{
-		return m_bIsWindowRunning && !WindowShouldClose();
+		return m_bIsWindowRunning && !::WindowShouldClose();
 	}
 
 	void Window::SetWindowRunning(bool value)
@@ -60,15 +59,15 @@ namespace FEngine
 
 	void Window::ToggleFullscreen() const
 	{
-		int display = GetCurrentMonitor();
+		int display = ::GetCurrentMonitor();
 
-		if (IsWindowFullscreen())
+		if (::IsWindowFullscreen())
 		{
-			SetWindowSize(m_Description.Width, m_Description.Height);
+			::SetWindowSize(m_Description.Width, m_Description.Height);
 		}
 		else
 		{
-			SetWindowSize(GetMonitorWidth(display), GetMonitorHeight(display));
+			::SetWindowSize(::GetMonitorWidth(display), ::GetMonitorHeight(display));
 		}
 
 		::ToggleFullscreen();
@@ -76,8 +75,8 @@ namespace FEngine
 
 	Vector3 Window::GetCenter()
 	{
-		float width = static_cast<float>(GetScreenWidth()) / 2;
-		float height = static_cast<float>(GetScreenHeight()) / 2;
+		float width = static_cast<float>(::GetScreenWidth()) / 2;
+		float height = static_cast<float>(::GetScreenHeight()) / 2;
 
 		return { width, height, 0.0f };
 	}
@@ -94,8 +93,8 @@ namespace FEngine
 			return;
 		}
 
-		int width = GetScreenWidth();
-		int height = GetScreenHeight();
+		int width = ::GetScreenWidth();
+		int height = ::GetScreenHeight();
 
 		Engine::GetInstance().GetEventManager().PushEvent<WindowResizeEvent>(width, height);
 	}

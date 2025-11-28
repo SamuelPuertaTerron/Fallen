@@ -3,10 +3,7 @@
 namespace FEngine
 {
 	struct WindowDescription;
-}
 
-namespace FEngine
-{
 	class IGame
 	{
 	public:

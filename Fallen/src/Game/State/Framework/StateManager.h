@@ -22,11 +22,9 @@ namespace Fallen
 		void SetGameState(const std::shared_ptr<IState>& state);
 
 		template<typename T>
+		requires std::derived_from<T, IState>
 		[[nodiscard]] std::shared_ptr<T> GetGameStateAs() const
 		{
-			static_assert(std::is_base_of_v<IState, T>,
-				"T must be derived from IGameState");
-
 			return std::dynamic_pointer_cast<T>(m_CurrentGameState);
 		}
 

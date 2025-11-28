@@ -1,0 +1,157 @@
+{
+  "World": {
+    "Entity Grass1": {
+      "Components": {
+        "Transform": {
+          "X": 0.0,
+          "Y": 0.0
+        }
+      },
+      "ID": 282217
+    },
+    "Entity Grass10": {
+      "Components": {
+        "Transform": {
+          "X": 64.0,
+          "Y": 32.0
+        }
+      },
+      "ID": 902002
+    },
+    "Entity Grass11": {
+      "Components": {
+        "Transform": {
+          "X": 64.0,
+          "Y": 64.0
+        }
+      },
+      "ID": 284193
+    },
+    "Entity Grass12": {
+      "Components": {
+        "Transform": {
+          "X": 64.0,
+          "Y": 96.0
+        }
+      },
+      "ID": 985307
+    },
+    "Entity Grass13": {
+      "Components": {
+        "Transform": {
+          "X": 96.0,
+          "Y": 0.0
+        }
+      },
+      "ID": 684629
+    },
+    "Entity Grass14": {
+      "Components": {
+        "Transform": {
+          "X": 96.0,
+          "Y": 32.0
+        }
+      },
+      "ID": 19599
+    },
+    "Entity Grass15": {
+      "Components": {
+        "Transform": {
+          "X": 96.0,
+          "Y": 64.0
+        }
+      },
+      "ID": 962071
+    },
+    "Entity Grass16": {
+      "Components": {
+        "Transform": {
+          "X": 96.0,
+          "Y": 96.0
+        }
+      },
+      "ID": 946598
+    },
+    "Entity Grass2": {
+      "Components": {
+        "Transform": {
+          "X": 0.0,
+          "Y": 32.0
+        }
+      },
+      "ID": 797175
+    },
+    "Entity Grass3": {
+      "Components": {
+        "Transform": {
+          "X": 0.0,
+          "Y": 64.0
+        }
+      },
+      "ID": 623104
+    },
+    "Entity Grass4": {
+      "Components": {
+        "Transform": {
+          "X": 0.0,
+          "Y": 96.0
+        }
+      },
+      "ID": 104817
+    },
+    "Entity Grass5": {
+      "Components": {
+        "Transform": {
+          "X": 32.0,
+          "Y": 0.0
+        }
+      },
+      "ID": 764422
+    },
+    "Entity Grass6": {
+      "Components": {
+        "Transform": {
+          "X": 32.0,
+          "Y": 32.0
+        }
+      },
+      "ID": 639389
+    },
+    "Entity Grass7": {
+      "Components": {
+        "Transform": {
+          "X": 32.0,
+          "Y": 64.0
+        }
+      },
+      "ID": 133326
+    },
+    "Entity Grass8": {
+      "Components": {
+        "Transform": {
+          "X": 32.0,
+          "Y": 96.0
+        }
+      },
+      "ID": 595919
+    },
+    "Entity Grass9": {
+      "Components": {
+        "Transform": {
+          "X": 64.0,
+          "Y": 0.0
+        }
+      },
+      "ID": 605812
+    },
+    "Entity Player": {
+      "Components": {
+        "Transform": {
+          "X": 142.39208984375,
+          "Y": 56.196754455566406
+        }
+      },
+      "ID": 76166
+    }
+  }
+}

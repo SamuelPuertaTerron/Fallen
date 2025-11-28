@@ -49,7 +49,7 @@ namespace FEngine
 
     enum class EMouseButton : uint8_t
     {
-        Invalid = 0xFF, // Not a real Raylib value, just a sentinel
+        Invalid = 0xFF, // Not a real Raylib value
 
         Left = 0,
         Right = 1,

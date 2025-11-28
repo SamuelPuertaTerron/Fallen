@@ -2,7 +2,6 @@
 #include "Fallen.h"
 
 #include "State/Framework/StateFactory.h"
-#include "GameData.h"
 
 namespace Fallen
 {
@@ -21,6 +20,12 @@ namespace Fallen
 
 	void Fallen::OnCreate()
 	{
+		AssetManager::CreateAsset("Resources/Textures/Grass.png", EAssetType::Texture);
+		AssetManager::CreateAsset("Resources/Textures/Dirt.png", EAssetType::Texture);
+		AssetManager::CreateAsset("Resources/Textures/Player.png", EAssetType::Texture);
+
+		AssetManager::CreateAsset("Resources/Worlds/World01.fm", EAssetType::World);
+
 		m_GameStateManager = std::make_unique<StateManager>();
 		m_GameStateManager->SetGameState(StateFactory::Create(EStateType::Menu));
 	}

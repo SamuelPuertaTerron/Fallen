@@ -16,6 +16,7 @@ workspace("Fallen")
     IncludeDir["Box2D"] = cwd .. "/ThirdParty/box2d/include"
     IncludeDir["ImGuiBase"] = cwd .. "/ThirdParty/imguibase"
     IncludeDir["Nlohmannjson"] = cwd .. "/ThirdParty/nlohmannjson/include"
+    IncludeDir["Sol2"] = cwd .. "/ThirdParty/sol2/include"
 
     filter "Debug"
     symbols "on"
@@ -39,4 +40,5 @@ workspace("Fallen")
         include "ThirdParty/ImGuiBase"
         include "ThirdParty/raylib"
         include "ThirdParty/nlohmannjson"
+        include "ThirdParty/sol2"
     group ""

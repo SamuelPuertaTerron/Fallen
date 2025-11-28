@@ -25,7 +25,6 @@ namespace FEngine
 		static Colour GetClearColour();
 		static void SetClearColour(Colour colour);
 
-		//Texture Drawing
 		static void DrawTexture(const std::shared_ptr<Texture>& texture, Vector3 position, Colour colour = Colour::White());
 
 		static void BeginRenderCamera(const Camera2DComponent& camera, const TransformComponent& transform);

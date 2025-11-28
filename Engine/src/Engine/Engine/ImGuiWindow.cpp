@@ -61,11 +61,12 @@ namespace FEngine
 
 	bool ImGuiWindow::DrawTextureButton(const std::shared_ptr<Texture>& texture)
 	{
-		return rlImGuiImageButton("##image_button", texture->GetTextureAs<::Texture>());
+		return false;
+		//return rlImGuiImageButton("##image_button", texture->GetTexture());
 	}
 
 	void ImGuiWindow::DrawTexture(const std::shared_ptr<Texture>& texture)
 	{
-		rlImGuiImage(texture->GetTextureAs<::Texture>());
+		//rlImGuiImage(texture->GetTexture());
 	}
 }//namespace FEngine

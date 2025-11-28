@@ -1,7 +1,7 @@
 ﻿#include "Globals.h"
 #include "Engine.h"
 
-#include <raylib/raylib.h>
+#include "raylib/raylib.h"
 
 #include "EventManager.h"
 #include "IGame.h"
@@ -25,14 +25,6 @@ namespace FEngine
 		delete m_pEngineInstance;
 	}
 
-	void Engine::CalculateDeltaTime()
-	{
-		m_CurrentTime = static_cast<float>(GetTime());
-		m_UnscaledDeltaTime = m_CurrentTime - m_PreviousTime;
-		m_DeltaTime = m_UnscaledDeltaTime * m_TimeScale;
-		m_PreviousTime = m_CurrentTime;
-	}
-
 	void Engine::CreateAndRun(const std::shared_ptr<IGame>& game)
 	{
 		Logger::Init();
@@ -44,15 +36,16 @@ namespace FEngine
 
 		m_Game->OnCreate();
 
-		m_PreviousTime = static_cast<float>(GetTime());
+		Time::Init();
 
 		while (m_Window->IsWindowRunning())
 		{
-			CalculateDeltaTime();
+			Time::CalculateDeltaTime();
+			float dt = Time::GetDeltaTime();
 
 			m_EventManager->PollEvents();
 
-			m_Game->OnTick(m_DeltaTime);
+			m_Game->OnTick(dt);
 
 			Render::BeginRender();
 

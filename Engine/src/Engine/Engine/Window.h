@@ -3,12 +3,7 @@
 
 namespace FEngine
 {
-	enum class EKeyCode : uint16_t;
-}
-
-namespace FEngine
-{
-	enum class EWindowFlags : uint32_t
+	enum class EWindowFlags : uint16_t
 	{
 		None = 0,
 		Fullscreen = 2,

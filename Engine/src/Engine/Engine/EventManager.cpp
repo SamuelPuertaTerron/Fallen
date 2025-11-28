@@ -1,9 +1,7 @@
 ﻿#include "Globals.h"
 #include "EventManager.h"
 
-#include <ranges>
-
-#include <raylib/raylib.h>
+#include "raylib/raylib.h"
 
 #include "Window.h"
 
@@ -59,7 +57,7 @@ namespace FEngine
         // Keyboard
         for (int key = MIN_RAYLIB_KEYS; key < MAX_RAYLIB_KEYS; key++)
         {
-            if (::IsKeyPressed(key))
+            if (Input::IsKeyPressed(static_cast<EKeyCode>(key)))
                 PushEvent<KeyEvent>(EEventType::KeyPressed, static_cast<EKeyCode>(key));
 
             if (::IsKeyReleased(key))

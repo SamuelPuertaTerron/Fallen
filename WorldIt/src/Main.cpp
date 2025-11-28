@@ -5,8 +5,8 @@ namespace WorldIt
 {
 	static int Main()
 	{
-		auto fallenGame = std::make_shared<WorldIt>();
-		Engine::GetInstance().CreateAndRun(fallenGame);
+		auto worldIt = std::make_shared<WorldIt>();
+		Engine::GetInstance().CreateAndRun(worldIt);
 		return 0;
 	}
 }//namespace Fallen
@@ -25,9 +25,10 @@ int main()
 			return WorldIt::Main();
 		}
 	#else //FE_PLATFORM_WINDOWS
+		//Anything But Windows will use the default int main()
 		int main()
 		{
 			return WorldIt::Main();
 		}
-	#endif //Anything But Windows will use the default int main()
+	#endif // Other Platforms
 #endif //FR_RELEASE

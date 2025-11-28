@@ -1,25 +1,20 @@
 ﻿#pragma once
+#include "raylib/raylib.h"
+
 namespace FEngine
 {
 	class Texture
 	{
 	public:
-		Texture();
 		Texture(const Path& path);
 		~Texture();
 
-		bool LoadTextureFromFile(const Path& path) const;
+		bool LoadTextureFromFile(const Path& path);
 
 		int GetWidth() const;
 		int GetHeight() const;
 
-		template<typename T>
-		T* GetTextureAs() const
-		{
-			return static_cast<T*>(GetRawTexture());
-		}
-
-		void* GetRawTexture() const;
+		::Texture GetTexture() const;
 
 		void UnLoad() const;
 
@@ -28,7 +23,7 @@ namespace FEngine
 		Texture& operator=(const Texture&) = delete;
 
 	private:
-		struct Impl;
-		std::unique_ptr<Impl> m_TextureImpl;
+		::Texture m_Texture;
+		bool m_IsLoaded;
 	};
 }//namespace FEngine

@@ -11,23 +11,35 @@ namespace FEngine::Logger
 	static bool g_ShouldLogToConsole = false;
 #endif
 
+	static Path g_LogFilePath = "Resources/Log/log.txt";
+
 	void Init()
 	{
-		SetTraceLogCallback(LogCallback);
+		::SetTraceLogCallback(LogCallback);
+
+		if (Filesystem::FileExists(g_LogFilePath))
+		{
+			Filesystem::RemoveFile(g_LogFilePath);
+		}
+
+		Filesystem::CreateFile(g_LogFilePath);
 	}
 
 	static void LogToConsole(int logLevel, const std::string& text)
 	{
 		switch (logLevel)
 		{
-		case LOG_DEBUG:
+		case ::LOG_DEBUG:
 			Log(ELogType::Debug, text);
 			break;
-		case LOG_WARNING:
+		case ::LOG_INFO:
+			Log(ELogType::Info, text);
+			break;
+		case ::LOG_WARNING:
 			Log(ELogType::Warning, text);
 			break;
-		case LOG_ERROR:
-		case LOG_FATAL:
+		case ::LOG_ERROR:
+		case ::LOG_FATAL:
 			Log(ELogType::Error, text);
 			break;
 		default:
@@ -38,12 +50,7 @@ namespace FEngine::Logger
 
 	static void LogToFile(const std::string& message)
 	{
-		Path path = "Resources/Log/log.txt";
-
-		if (Filesystem::FileExists(path))
-		{
-			Filesystem::WriteText(path, message);
-		}
+		Filesystem::WriteText(g_LogFilePath, message, EFileWriteMode::Append);
 	}
 
 	void Log(ELogType type, const std::string& message)
@@ -52,6 +59,7 @@ namespace FEngine::Logger
 		switch (type)
 		{
 		case ELogType::Debug:   prefix = "[DEBUG]"; break;
+		case ELogType::Info:    prefix = "[INFO]"; break;
 		case ELogType::Warning: prefix = "[WARN]";  break;
 		case ELogType::Error:   prefix = "[ERROR]"; break;
 		}

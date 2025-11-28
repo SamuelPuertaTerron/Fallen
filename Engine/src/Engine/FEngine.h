@@ -12,7 +12,10 @@
 #include "Engine/Render/Texture.h"
 #include "Engine/Render/Render.h"
 
-#include "Engine/Game/Components.h"
-#include "Engine/Game/Entity.h"
-#include "Engine/Game/EntityFactory.h"
-#include "Engine/Game/World.h"
+#include "Engine/Game/Assets/AssetManager.h"
+#include "Engine/Game/Assets/Asset.h"
+
+#include "Engine/Game/World/Components.h"
+#include "Engine/Game/World/Entity.h"
+#include "Engine/Game/World/EntityFactory.h"
+#include "Engine/Game/World/World.h"

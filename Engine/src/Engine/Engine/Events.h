@@ -7,6 +7,7 @@ namespace FEngine
 	{
 		Unknown = 0,
 
+		//Window
 		WindowResize,
 
 		// Input
@@ -15,7 +16,7 @@ namespace FEngine
 		MouseButtonPressed,
 		MouseButtonReleased,
 		MouseMoved,
-		MouseScrolled
+		MouseScrolled,
 	};
 
 	struct Event

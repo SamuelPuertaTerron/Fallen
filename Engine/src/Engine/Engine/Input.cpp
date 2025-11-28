@@ -1,7 +1,7 @@
 ﻿#include "Globals.h"
 #include "Input.h"
 
-#include <raylib/raylib.h>
+#include "raylib/raylib.h"
 
 namespace FEngine
 {

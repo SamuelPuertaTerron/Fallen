@@ -1,8 +1,6 @@
 #include "WorldItGlobals.h"
 #include "WorldIt.h"
 
-
-
 namespace WorldIt 
 {
 	WindowDescription WorldIt::GetWindowDescription()
@@ -57,9 +55,13 @@ namespace WorldIt
 	{
 
 	}
+
+
 	void WorldIt::DrawTilesetPanel()
 	{
 		m_ImGuiWindow->BeginWindow("Tileset", true);
+
+		//m_ImGuiWindow->DrawTexture();
 
 		m_ImGuiWindow->EndWindow();
 	}
@@ -69,16 +71,21 @@ namespace WorldIt
 
 		m_ImGuiWindow->EndWindow();
 	}
+
 	void WorldIt::DrawPropertiesPanel()
 	{
 		m_ImGuiWindow->BeginWindow("Properties", true);
 
 		m_ImGuiWindow->EndWindow();
 	}
+
 	void WorldIt::SaveWorldToJson()
 	{
+
 	}
+
 	void WorldIt::LoadWorldFromJson()
 	{
+
 	}
 }//namespace WorldIt

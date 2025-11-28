@@ -22,6 +22,9 @@ project "Fallen"
 		"%{IncludeDir.RaylibDir}",
 		"%{IncludeDir.Box2d}",
 		"%{IncludeDir.Entt}",
+		"%{IncludeDir.ImGuiBase}",
+        "%{IncludeDir.Nlohmannjson}",
+        "%{IncludeDir.Sol2}"
 	}
 
 	links

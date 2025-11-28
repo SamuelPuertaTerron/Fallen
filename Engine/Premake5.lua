@@ -22,7 +22,8 @@ project "Engine"
         "%{IncludeDir.Entt}",
         "%{IncludeDir.Box2d}",
         "%{IncludeDir.ImGuiBase}",
-        "%{IncludeDir.Nlohmannjson}"
+        "%{IncludeDir.Nlohmannjson}",
+        "%{IncludeDir.Sol2}"
     }
 
     links 
@@ -31,7 +32,8 @@ project "Engine"
         "Box2d",
         "Entt",
         "ImGuiBase",
-        "nlohmann"
+        "nlohmann",
+        "sol2"
     }
 
     linkoptions { "/IGNORE:4006" } -- For winmm library
@@ -49,6 +51,24 @@ project "Engine"
             "opengl32",
             "gdi32",
             "winmm"
+        }
+
+    filter "system:linux"
+        pic "On"
+        defines { "FE_PLATFORM_LINUX" }
+
+        links {
+            "GL",
+            "pthread",
+            "dl",
+            "X11",
+            "m"
+        }
+
+        buildoptions {
+            "-Wall",
+            "-Wextra",
+            "-Wno-unknown-pragmas"
         }
 
     filter "configurations:Debug"

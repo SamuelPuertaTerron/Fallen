@@ -5,6 +5,7 @@ namespace FEngine::Logger
 	enum class ELogType : uint8_t
 	{
 		Debug,
+		Info,
 		Warning,
 		Error,
 	};
@@ -14,4 +15,4 @@ namespace FEngine::Logger
 	void Log(ELogType type, const std::string& message);
 
 	void LogCallback(int logLevel, const char* text, va_list args);
-}//namespace FEngine
+}//namespace FEnginez
