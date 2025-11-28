@@ -9,6 +9,10 @@ The project uses **Premake 5** as the build system and currently supports **Visu
 2. This will generate a Visual Studio solution.  
 3. Open the solution and build the currently selected application – all dependencies will be built automatically.  
 
+## Coding Standards
+
+[Coding Standards](CodingStandards.md)
+
 ## Third-Party Libraries  
 
 Fallen relies on the following libraries:  
