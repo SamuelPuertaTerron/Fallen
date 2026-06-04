@@ -64,7 +64,7 @@ These are the coding standards throughout this project.
 
     Constants should be written in upper snake case for example `MAX_SPEED`. 
 
-    Private & Global variables must have thier type in the name: `m_bName` for bool, `m_fName` for float, `m_eName` for enum, `m_vName` for vector, `m_iName` for int, `m_mName` for map, `m_pName` for raw pointer, **Don't** use this for smart pointers, any other variable should just use `m_Name`.    
+    Private & Global variables: `m_pName` for raw pointer, **Don't** use this for smart pointers, any other variable should just use `m_Name`.    
 
 * **Functions**
 
